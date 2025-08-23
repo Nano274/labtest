@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画像情報研究室 - ホーム</title>
+    <!-- 预加载首屏轮播用到的图片 -->
+    <link rel="preload" as="image" href="Background/bg1.jpg">
+    <link rel="preload" as="image" href="Background/bg2.jpg">
+    <link rel="preload" as="image" href="Background/bg3.jpg">
+    <!-- 预加载首屏轮播用到的图片 -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2 class="logo-title">
+                    画像情報研究室
+                    <small class="logo-sub">‹AIセンシンググループ›</small>
+                </h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">ホーム・研究方向</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#papers" class="nav-link">研究論文</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#students" class="nav-link">在籍生</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">入学希望の方へ</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ホーム・研究方向 全画面セクション -->
+    <section id="home" class="fullscreen-section app-section">
+         <!-- 背景轮播层 -->
+        <div class="bg-slideshow" aria-hidden="true">
+            <div class="slide" style="background-image:url('Background/bg1.jpg')"></div>
+            <div class="slide" style="background-image:url('Background/bg2.png')"></div>
+            <div class="slide" style="background-image:url('Background/bg3.jpg')"></div>
+        </div>
+        <div class="fullscreen-container">
+            <!-- 左側：研究室紹介 -->
+            <div class="left-panel">
+                <div class="lab-intro">
+                    <h1 class="lab-title">画像情報研究室<span class="lab-title-sub">— AIセンシンググループ —</span></h1>
+                    <p class="lab-subtitle">画像処理・コンピュータビジョンの最先端技術を探求し、革新的な研究を推進します</p>
+                    <div class="lab-description">
+                        <h3>研究室概要</h3>
+                        <p>画像処理、コンピュータビジョン、機械学習、深層学習を専門とする最先端の研究チームです。実世界の複雑な問題を解決し、画像技術の様々な分野への応用と発展を推進しています。</p>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="#papers" class="btn btn-primary">研究論文</a>
+                        <a href="#students" class="btn btn-secondary">在籍生</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右側：研究方向 -->
+            <div class="right-panel">
+                <!-- 上半部分：研究方向 -->
+                <div class="research-areas">
+                    <h2 class="research-title">研究方向</h2>
+                    <div class="research-grid">
+                        <div class="research-item">
+                            <div class="research-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h4>画像認識</h4>
+                            <p>深層学習による高精度画像認識</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-icon">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <h4>画像処理</h4>
+                            <p>先進的な画像解析・処理技術</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h4>コンピュータビジョン</h4>
+                            <p>知能的視覚システムの開発</p>
+                        </div>
+                        <div class="research-item">
+                            <div class="research-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4>機械学習</h4>
+                            <p>AI技術の研究開発</p>
+                        </div>  
+                    </div>
+                </div>
+                
+                <!-- 下半部分：老师介绍 -->
+                <div class="professor-intro">
+                    <h2 class="professor-title">指導教員</h2>
+                    <div class="professor-card">
+                        <div class="professor-avatar"></div>
+                        <div class="professor-info">
+                            <h3 class="professor-name">塚田　正人 教授</h3>
+                            <p class="professor-title-text">画像情報研究室</p>
+                            <p class="professor-description">
+                                コンピュータビジョンと機械学習の分野で20年以上の研究経験を持つ。
+                                特にｘｘｘｘにおいて多数の成果を上げている。
+                            </p>
+                            <div class="professor-contact">
+                                <span><i class="fas fa-envelope"></i>tsukada@iit.tsukuba.ac.jp</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 研究論文 -->
+    <section id="papers" class="papers app-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">研究論文</h2>
+                <p class="section-subtitle">最新の研究成果と学術論文</p>
+            </div>
+            <div class="papers-list">
+                <div class="paper-item">
+                    <h3 class="paper-title">論文①</h3>
+                    <p class="paper-authors">ｘｘｘ</p>
+                    <p class="paper-journal">ｘｘｘ工学会誌, Vol.41, No.2, pp.123-135, 2023</p>
+                    <p class="paper-description">ｃｃｃを用いたｘｘｘ精度の向上を実現</p>
+                </div>
+                <div class="paper-item">
+                    <h3 class="paper-title">論文②</h3>
+                    <p class="paper-authors">ｘｘ</p>
+                    <p class="paper-journal">ｘｘｘ学会論文誌, Vol.64, No.8, pp.1456-1468, 2023</p>
+                    <p class="paper-description">ｘｘｘｘを開発</p>
+                </div>
+                <div class="paper-item">
+                    <h3 class="paper-title">論文③</h3>
+                    <p class="paper-authors">小野</p>
+                    <p class="paper-journal">IEEE Transactions on Intelligent Transportation Systems, Vol.24, No.5, pp.2789-2801, 2023</p>
+                    <p class="paper-description">ｘｘｘｘの構築</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 在籍生 -->
+    <section id="students" class="students app-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">在籍生</h2>
+                <p class="section-subtitle">研究室メンバー紹介</p>
+            </div>
+            
+            <div class="students-list">
+                <div class="student-item">
+                    <h3 class="student-name">汪 慶玉
+                         <span class="student-ename">(WANG QINGYU)</span>
+                    </h3>
+                    <span class="student-level-D1">D1</span>
+                </div>
+            </div>
+
+            <div class="students-list">
+                <div class="student-item">
+                    <h3 class="student-name">衞藤 雅顕</h3>
+                    <span class="student-level-M2">M2</span>
+                </div>
+                <div class="student-item">
+                    <h3 class="student-name">宋 興臻
+                        <span class="student-ename">(SONG XINGZHEN)</span>
+                    </h3>
+                    <span class="student-level-M2">M2</span>
+                </div>
+                <div class="student-item">
+                    <h3 class="student-name">胡 昕蕊
+                        <span class="student-ename">(HU XINRUI)</span>
+                    </h3>
+                    <span class="student-level-M2">M2</span>
+                </div>
+                <div class="student-item">
+                    <h3 class="student-name">葛 飛宇
+                        <span class="student-ename">(GE FEIYU)</span>
+                    </h3>
+                    <span class="student-level-M2">M2</span>
+                </div>
+
+            </div>
+
+            <div class="students-list">
+                <div class="student-item">
+                    <h3 class="student-name">佐藤 英介</h3>
+                    <span class="student-level-M1">M1</span>
+                </div>
+                <div class="student-item">
+                    <h3 class="student-name">張 崇聖
+                        <span class="student-ename">(CHANG CHUNGSHENG)</span>
+                    </h3>
+                    <span class="student-level-M1">M1</span>
+                </div>
+                <div class="student-item">
+                    <h3 class="student-name">魏 廉潔
+                        <span class="student-ename">(WEI LIANJIE)</span>
+                    </h3>
+                    <span class="student-level-M1">M1</span>
+                </div>
+                <div class="student-item">
+                    <h3 class="student-name">張 峻傑
+                        <span class="student-ename">(ZHANG JUNJIE)</span>
+                    </h3>
+                    <span class="student-level-M1">M1</span>
+                </div>
+                <div class="student-item">
+                    <h3 class="student-name">謝 子航
+                        <span class="student-ename">(XIE ZIHANG)</span>
+                    </h3>
+                    <span class="student-level-M1">M1</span>
+                </div>
+            </div>
+
+            <div class="section-header section-divider">
+                <h2 class="section-title">OB・OG</h2>
+                <p class="section-subtitle">卒業の学生</p>
+            </div>
+            <div class="students-list">
+                <div class="student-item">
+                    <h3 class="student-name">YU YIKUN</h3>
+                    <span class="student-level-OBOG">修士了（2025）</span>
+                </div>
+                <div class="student-item">
+                    <h3 class="student-name">伊藤 良起</h3>
+                    <span class="student-level-OBOG">博士了（2025）</span>
+                </div>
+                <div class="student-item">
+                    <h3 class="student-name">小野 晟太郎</h3>
+                    <span class="student-level-OBOG">修士了（2025）</span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 入学連絡 -->
+    <section id="contact" class="contact app-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">入学連絡</h2>
+                <p class="section-subtitle">研究室への入学をご希望の方へ</p>
+            </div>
+            <div class="contact-content">
+                <div class="admission-info">
+                    <div class="admission-section">
+                        <h3>募集要項</h3>
+                        <div class="admission-item">
+                            <h4>博士課程</h4>
+                            <p>画像処理・コンピュータビジョン分野での研究経験を有する方<br>
+                            修士号取得者または取得見込み者</p>
+                        </div>
+                        <div class="admission-item">
+                            <h4>修士課程</h4>
+                            <p>情報工学・電子工学・数学等の関連分野の学士号取得者<br>
+                            プログラミング経験（Python、C++等）</p>
+                        </div>
+                        <div class="admission-item">
+                            <h5>研究生(受け入れ停止)</h5>
+                            <p2>学部4年生または大学院生<br>
+                            画像処理・機械学習に興味のある方</p2>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="icon-box">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="text-box">
+                                <h4>所在地</h4>
+                                <p>〒305-8577 茨城県つくば市天王台1-1-1<br>理科系棟D203</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon-box">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="text-box">
+                                <h4>メール</h4>
+                                <p>tsukada@iit.tsukuba.ac.jp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>画像情報研究室</h3>
+                    <p>画像処理・コンピュータビジョン分野の最先端研究を通じて、科学技術の革新と発展を推進しています。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>クイックリンク</h4>
+                    <ul>
+                        <li><a href="#home">ホーム</a></li>
+                        <li><a href="#research">研究方向</a></li>
+                        <li><a href="#papers">研究論文</a></li>
+                        <li><a href="#students">在籍生</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>連絡先</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 画像情報研究室. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
