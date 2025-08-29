@@ -42,9 +42,9 @@ html {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 90vw;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,14 +59,14 @@ html {
 
   color: #2563eb;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   line-height: 1;
   margin: 0;
 }
 
 /* 副标题样式 */
 .nav-logo .logo-sub {
-  font-size: .9rem;         /* 更直观的绝对值，避免 em 看不出区别 */
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);         /* 响应式字体大小 */
   font-weight: 600;
   opacity: .9;
   margin: 0;                /* 避免默认 margin 影响 */
@@ -75,15 +75,17 @@ html {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: clamp(1rem, 3vw, 2rem);
 }
 
 .nav-link {
     text-decoration: none;
     color: #374151;
     font-weight: 500;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
     transition: color 0.3s ease;
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -133,10 +135,16 @@ html {
 
 .fullscreen-container {
     display: flex;
-    width: 100%;
-    height: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
+     /* 如果仍想固定高 790px，就写 height: 790px; 
+     想占满屏幕就用 100vh/100dvh（二选一，不要两者同时） */
+    /* height: 790px; */
+    height: 100vh;
+    align-items: stretch;
+
+    margin-left: 10px;   /* 左边缩进 40px */
+    margin-right: 10px;  /* 右边缩进 40px */
+    margin-top: 40px;    /* 上缩进 60px */
+    padding-bottom: 100px; /* 下缩进 40px */
 }
 
 /* 统一时长控制（按需改） */
@@ -207,13 +215,23 @@ html {
   background: rgba(0, 0, 0, 0.564);
 }   
 
+/* 关键：等分宽度，且不被内容撑破 */
+.fullscreen-container > .left-panel,
+.fullscreen-container > .right-panel {
+  flex: 1 1 0;     /* 强制各占一半 */
+  min-width: 0;    /* 防止子元素把面板撑开 */
+  box-sizing: border-box;
+  margin-top: 0;   /* 避免高度再被 margin-top 影响 */
+  height: 100%;    /* 跟随父容器高度（父容器 790px 或 100vh 都可） */
+}
+
 /* 左侧面板 */
 .left-panel {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.05);
     margin-top: 40px;   /* ← 距离父容器顶部 40px */
     height: 790px; /* ← 面板高度 */
@@ -250,18 +268,24 @@ html {
 
 .lab-description {
     margin-bottom: 40px;
+    width: 500px;  /* 固定宽度 */
+    min-width: 500px;  /* 最小宽度 */
+    position: relative;  /* 相对定位 */
 }
 
 .lab-description h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
     font-weight: 600;
+    white-space: nowrap;  /* 禁止换行 */
 }
 
 .lab-description p {
     font-size: 1rem;
     line-height: 1.7;
     opacity: 0.9;
+    width: 500px;  /* 固定宽度 */
+
 }
 
 .action-buttons {
@@ -305,6 +329,11 @@ html {
     transform: translateY(-2px);
 }
 
+.link {
+  color: white;              /* 链接文字改成白色 */
+  text-decoration: underline;/* 强制保留下划线 */
+}
+
 /* 右侧面板 */
 .right-panel {
     flex: 1;
@@ -319,7 +348,7 @@ html {
 }
 
 .research-areas {
-    flex: 1;
+    /* flex: 1; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -383,7 +412,7 @@ html {
 
 /* 老师介绍 */
 .professor-intro {
-    flex: 1;
+    /* flex: 1; */
     display: flex;
     flex-direction: column;
     justify-content: center;
